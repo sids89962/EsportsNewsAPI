@@ -5,9 +5,7 @@ import Loading from '../../utils/loading/Loading'
 import EventCard from '../../utils/loading/Card/EventCard'
 import { Link } from 'react-router-dom'
 export default function HomePage() {
-    const { state, dispatch } = useContext(GlobalState)
-
-    console.log(state)
+    const { state, dispatch } = useContext(GlobalState)   
     return (
         <div className="container-fluid">
             <div className="row">
@@ -19,15 +17,12 @@ export default function HomePage() {
                         <h2>Stay Connected <br></br> with the E-world</h2>
                     </div>
                 </div>
-
             </div>
-
-
             {state.game.length === 0 ? <Loading /> :
                 state.game.filter(item => item.name === "PUBG" || item.name === "Valorant")
                     .map((x) => 
                         <>
-                            <div className="leagues" key={x.id}>
+                         <div className="leagues" key={x.id}>
                                 <h1>{x.name}</h1>
                                 <div className="flex">
                                     {
@@ -36,12 +31,9 @@ export default function HomePage() {
                                     }
                                 </div>
                             </div>
-
                         </>
                     )
             }
-
-
         </div>
     )
 }
