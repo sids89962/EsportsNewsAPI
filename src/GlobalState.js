@@ -25,7 +25,7 @@ export const DataProvider = (props) => {
 
     useEffect(() => {
         const api = async () => {
-            const res = await axios.get('https://api.pandascore.co/videogames?token=oYCPgx80nO9GBKope8wTvpqr-EeoCYQDMidjipXqakxvzh-d2fk', {
+            const res = await axios.get('https://api.pandascore.co/videogames?token=YOUR_API_TOKEN', {
                 headers: {
                     'Accept': 'application/json'
                 }
